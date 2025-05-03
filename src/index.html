@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List App</title>
+    <meta
+      name="description"
+      content="A simple and clean to-do list web app to manage your daily tasks efficiently."
+    />
+    <meta name="author" content="mohamed oulahguine" />
+    <meta
+      name="keywords"
+      content="to-do list, task manager, productivity, web app"
+    />
+    <!-- <link rel="icon" href="/public/favicon.ico" type="image/x-icon" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="container_todoApp">
+      <section class="todoApp">
+        <form class="task-form" autocomplete="off">
+          <div class="inputs">
+            <input
+              type="text"
+              id="input_title"
+              class="input_title"
+              placeholder="Title..."
+              required
+            />
+            <input
+              type="text"
+              id="input_about"
+              class="input_about"
+              placeholder="About..."
+              required
+            />
+          </div>
+
+          <button type="submit" class="btnAddTask" aria-label="Add Task">
+            +
+          </button>
+        </form>
+
+        <div class="listTasks">
+          <p class="zeroTask">No tasks yet 🥲</p>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="/src/js/main.js" defer></script>
+  </body>
+</html>
