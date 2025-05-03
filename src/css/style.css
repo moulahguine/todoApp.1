@@ -5,7 +5,11 @@
 
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+<<<<<<< HEAD
   background-image: URL(../../public/assets/images/cover-page.png);
+=======
+  background-image: url(../../public/assets/images/cover-page.png);
+>>>>>>> 2b8a55a (add favicon and some fix for phone screen)
   backdrop-filter: blur(3px);
   background-position: center;
   background-repeat: no-repeat;
@@ -31,13 +35,19 @@ body {
 
 .container_todoApp {
   background-color: var(--darkblack-color);
-  height: 844px;
+  height: clamp(500px, 50vh, 844px);
   width: 390px;
   padding: 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+@media (max-width: 767px) {
+  .container_todoApp {
+    height: 100vh;
+    width: 100%;
+  }
 }
 
 .container_todoApp form {
