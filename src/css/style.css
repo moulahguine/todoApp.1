@@ -5,11 +5,7 @@
 
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-<<<<<<< HEAD
-  background-image: URL(../../public/assets/images/cover-page.png);
-=======
-  background-image: url(../../public/assets/images/cover-page.png);
->>>>>>> 2b8a55a (add favicon and some fix for phone screen)
+  background-image: URL(/public/assets/images/cover-page.png);
   backdrop-filter: blur(3px);
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +31,7 @@ body {
 
 .container_todoApp {
   background-color: var(--darkblack-color);
-  height: clamp(500px, 50vh, 844px);
+  height: clamp(500px, 100vh, 844px);
   width: 390px;
   padding: 22px;
   display: flex;
@@ -45,7 +41,7 @@ body {
 }
 @media (max-width: 767px) {
   .container_todoApp {
-    height: 100vh;
+    height: 100vmax;
     width: 100%;
   }
 }
@@ -90,7 +86,7 @@ body {
   background-color: transparent;
   border-radius: 4px;
   border: var(--lightorange-color) solid 2px;
-  font-size: 60px;
+  font-size: 30px;
   font-weight: 100;
   color: var(--lightorange-color);
   cursor: pointer;
@@ -114,10 +110,10 @@ body {
   &::after {
     content: "";
     background-color: var(--lightorange-color);
-    width: 64px;
+    width: 100px;
     height: 3px;
-    top: -15px;
-    left: 140px;
+    top: -10px;
+    left: 120px;
     position: absolute;
     border-radius: 5px;
   }
@@ -162,9 +158,6 @@ body {
   transition: all 0.3s ease-in-out;
   margin-bottom: 5px;
   margin-top: 15px;
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
 .listTasks .task .container .content {

@@ -2,7 +2,12 @@ import { removeTaskById, getTasks } from "./taskManager.js";
 import { saveTasks } from "./storage.js";
 
 export function renderTasks(tasks, container) {
-  container.innerHTML = "";
+  if (tasks.length !== 0) {
+    container.innerHTML = "";
+    document.getElementsByClassName("zeroTask")[0].style.display = "none";
+  } else {
+    document.getElementsByClassName("zeroTask")[0].style.display = "block";
+  }
   tasks.forEach((task, i) => renderTask(task, i, container));
 }
 
@@ -57,9 +62,9 @@ export function renderTask(task, i, container) {
   container_task.appendChild(remove_task);
   mainContainer_task.appendChild(container_task);
   mainContainer_task.appendChild(btn_bottom);
+
   btn_bottom.appendChild(edit_task);
   btn_bottom.appendChild(share_task);
-
   del_alert.appendChild(alert);
   alert.appendChild(p_alert);
   alert.appendChild(btn_alert);
