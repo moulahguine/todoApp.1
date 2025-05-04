@@ -33,6 +33,7 @@ Code is commented and structured to be beginner-friendly and ready for scaling u
 > Basic view with tasks listed. Tasks can be marked complete or edited.
 
 ![Add Task](./public/assets/images/app.png)  
+![Add Task](./public/assets/images/app1.png)  
 > Form to add a new task with validation.
 
 ---
